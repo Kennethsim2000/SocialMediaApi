@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class CommonResult<T> {
-    private long code;
+    private int code;
     private String message;
     private T data;
     private boolean success;
@@ -17,7 +17,7 @@ public class CommonResult<T> {
         return new CommonResult<>(200, message, data, true);
     }
 
-    public static <T> CommonResult<T> fail(String message) {
-        return new CommonResult<>(400, message, null, false);
+    public static <T> CommonResult<T> fail(String message, Integer code) {
+        return new CommonResult<>(code, message, null, false);
     }
 }

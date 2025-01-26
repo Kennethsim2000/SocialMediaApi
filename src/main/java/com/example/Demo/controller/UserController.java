@@ -27,7 +27,7 @@ public class UserController {
     public CommonResult<UserVo> createUser(@RequestBody UserDto userDto) {
         User user = new User();
         if(userService.findByUsername(userDto.getUsername()) != null) {
-            return CommonResult.fail("User with username already exist");
+            return CommonResult.fail("User with username already exist", 400);
         }
         user.setUsername(userDto.getUsername());
         user.setPassword(userDto.getPassword());
@@ -46,7 +46,7 @@ public class UserController {
     @GetMapping
     public CommonResult<UserVo> getUser(@RequestParam Long id) {
         if(id == null) {
-            return CommonResult.fail("Please provide id as a request parameter");
+            return CommonResult.fail("Please provide id as a request parameter", 400);
         }
         User user =  userService.findById(id);
         UserVo userVo = new UserVo();

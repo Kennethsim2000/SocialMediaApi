@@ -1,6 +1,6 @@
 package com.example.Demo.vo;
 
-import java.util.List;
+import java.util.Set;
 
 import lombok.Data;
 
@@ -8,6 +8,6 @@ import lombok.Data;
 public class AccountVo {
     private String username;
     private String email;
-    private List<String> following;
-    private List<String> followers;
+    private Set<String> following;
+    private Set<String> followers;
 }
