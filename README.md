@@ -1,6 +1,6 @@
 # Account Management API
 
-This is a simple RESTful API for managing user accounts, including creating accounts, retrieving account details, and listing all accounts. The API is built using Spring Boot and follows REST conventions.
+This is a simple RESTful social media API for managing user accounts, following and unfollowing of accounts, as well as retrieval of posts based on accounts you are following.
 
 ## Features
 
@@ -8,6 +8,9 @@ This is a simple RESTful API for managing user accounts, including creating acco
 - **Get Account by ID**: Retrieve details of a specific account using its unique ID.
 - **Get All Accounts**: Retrieve a list of all user accounts in the system.
 - **Follow an account** Follows an account based on followerId and followedId
+- **Unfollow an account** Unfollows an account based on followerId and followedId
+- **Retrieve followers** retrieves all the followers of an account based on accountId
+- **Retrieve following** retrieves all the following of an account based on accountId
 ## Technologies Used
 
 - **Spring Boot**: Backend framework for building the API.
